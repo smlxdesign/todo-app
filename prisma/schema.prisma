@@ -14,7 +14,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Todo {
+model Post {
   id        Int      @id @default(autoincrement())
   name      String
   createdAt DateTime @default(now())
@@ -62,7 +62,7 @@ model User {
   image         String?
   accounts      Account[]
   sessions      Session[]
-  todos         Todo[]
+  posts         Post[]
 }
 
 model VerificationToken {
